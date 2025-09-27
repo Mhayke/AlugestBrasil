@@ -1,0 +1,32 @@
+
+.content h1 {
+  font-size: 2rem;
+  color: #2ecc71;
+  margin-bottom: 15px;
+}
+
+.content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px 5px 0 5px;
+  cursor: pointer;
+  background-color: #2ecc71;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #27ae60;
+}
+
+

@@ -1,1 +1,101 @@
-<p>imovel works!</p>
+<header class="navbar">
+    <!-- Botão do menu hamburguer -->
+    <div class="menu-toggle" (click)="toggleMenu()">&#9776;</div>
+</header>
+
+<div id="menuOverlay" class="menu-overlay" (click)="closeMenu()"></div>
+
+    <!-- Menu lateral -->
+<nav id="sideMenu" class="side-menu">
+<ul>
+    <li><a (click)="navigateToInicio()">Início</a></li>
+    <li><a (click)="navigateToImovel()">Gerenciar Imóvel</a></li>
+    <li><a >Gerenciar Inquilinos</a></li>
+    <li><a (click)="navigateToHomePage()">Sair</a></li>
+</ul>
+</nav>
+
+<!-- Cabeçalho da página -->
+<div class="page-header">
+  <h1 class="page-title">AlugestBrasil</h1><br>
+  <h1 class="page-subtitle">Gerenciamento de Imóveis</h1>
+  <p class="page-subtitle">Cadastre e gerencie seus imóveis</p>
+</div>
+
+<div class="content-wrapper">
+  <!-- Seção de Cadastro -->
+  <div class="section cadastro-section">
+    <div class="section-header">
+      <h2 class="section-title">Cadastrar Novo Imóvel</h2>
+    </div>
+    
+    <form class="cadastro-form">
+      <div class="form-group">
+        <label for="titulo">Título do Imóvel</label>
+        <input 
+          type="text" 
+          id="titulo" 
+          name="titulo"
+          placeholder="Digite o título do imóvel"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label for="descricao">Endereço do Imóvel</label>
+        <input 
+          type="text" 
+          id="endereco" 
+          name="descricao"
+          placeholder="Digite o endereço do imóvel"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label for="quartos">Número de Quartos</label>
+        <input 
+          type="number"
+          min="0"
+          step="1"
+          id="quartos" 
+          name="quartos"
+          placeholder="Digite o número de quartos"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label for="valor">Valor do Aluguel (R$)</label>
+        <input 
+          type="number"
+          min="0"
+          id="valor" 
+          name="valor"
+          placeholder="Digite o valor do aluguel"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label for="endereco">Descrição do Imóvel</label>
+        <textarea 
+          id="texto" 
+          name="texto"
+          placeholder="Digite uma descrição para o imóvel"
+          rows="4"
+          required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="status">Status do imóvel</label>
+        <select id="status" name="status">
+        <option value="disponivel">Disponível</option>
+        <option value="alugado">Alugado</option>
+      </select>
+      </div>
+
+      <a type="submit" class="btn-cadastrar" (click)="cadastrarImovel()">
+          Cadastrar Imóvel
+      </a>
+    </form>
+  </div>
+</div>
+
+
